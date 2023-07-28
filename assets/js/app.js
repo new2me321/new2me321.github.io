@@ -83,11 +83,11 @@
   /*===== Search bar js end ======*/
   
   /*=== Text Animation ===*/
-  var words = ['Robotics Software Engineer', 'Programmer', 'CAD Specialist' ],
+  var job_titles = ['Robotics Software Engineer', 'Programmer', 'CAD Specialist' ],
   part,
   i = 0,
   offset = 0,
-  len = words.length,
+  len = job_titles.length,
   forwards = true,
   skip_count = 0,
   skip_delay = 15,
@@ -95,7 +95,7 @@
   var wordflick = function () {
   setInterval(function () {
   if (forwards) {
-  if (offset >= words[i].length) {
+  if (offset >= job_titles[i].length) {
       ++skip_count;
       if (skip_count == skip_delay) {
       forwards = false;
@@ -113,7 +113,7 @@
       }
   }
   }
-  part = words[i].substr(0, offset);
+  part = job_titles[i].substr(0, offset);
   if (skip_count == 0) {
   if (forwards) {
       offset++;
